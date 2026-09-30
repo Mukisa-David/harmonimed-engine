@@ -5,8 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "harmonimed-engine"
 version = "0.1.0"
-description = "Open-Source DICOM Metadata Harmonization Engine"
-authors = [{ name = "Maintainer", email = "dev@harmonimed.org" }]
+description = "Multi-vendor DICOM header de-identification and NDRLs validation engine"
+readme = "README.md"
+authors = [{ name = "Mukisa David", email = "dev@harmonimed.org" }]
 dependencies = [
     "pydicom>=2.4.0",
     "pandas>=2.0.0",
@@ -18,3 +19,11 @@ requires-python = ">=3.9"
 
 [project.scripts]
 harmonimed = "harmonimed.cli:cli"
+
+# Explicitly tell setuptools to only discover and package 'harmonimed'
+[tool.setuptools.packages.find]
+include = ["harmonimed*"]
+
+
+[tool.setuptools.package-data]
+harmonimed = ["config/*.yaml", "config/*.json"]
