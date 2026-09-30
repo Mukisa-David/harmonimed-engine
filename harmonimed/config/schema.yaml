@@ -1,0 +1,31 @@
+# Schema mapping configuration for CT & MRI
+phi_tags_to_anonymize:
+  - PatientName
+  - PatientID
+  - PatientBirthDate
+  - PatientAddress
+  - InstitutionName
+  - InstitutionalDepartmentName
+
+required_attributes:
+  - Modality
+  - SeriesInstanceUID
+  - StudyInstanceUID
+  - SliceThickness
+  - PixelSpacing
+
+series_description_normalization:
+  t2_weighted:
+    - "AX T2"
+    - "AXIAL T2"
+    - "T2W_DRIVE"
+    - "T2 FRFSE"
+  t1_weighted:
+    - "AX T1"
+    - "AXIAL T1"
+    - "T1W_SE"
+    - "T1 FLAIR"
+  ct_brain:
+    - "CT BRAIN THIN"
+    - "HEAD 5mm"
+    - "ROUTINE HEAD"

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "harmonimed-engine"
+version = "0.1.0"
+description = "Open-Source DICOM Metadata Harmonization Engine"
+authors = [{ name = "Maintainer", email = "dev@harmonimed.org" }]
+dependencies = [
+    "pydicom>=2.4.0",
+    "pandas>=2.0.0",
+    "pyyaml>=6.0",
+    "click>=8.1.0",
+    "pyarrow>=12.0.0"
+]
+requires-python = ">=3.9"
+
+[project.scripts]
+harmonimed = "harmonimed.cli:cli"
