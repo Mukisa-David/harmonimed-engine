@@ -7,3 +7,8 @@ dist/
 __pycache__/
 *.parquet
 
+
+downloadSeries_source.txt
+download_tcia_benchmarks.py
+sample_dicoms/
+test_sample.dcm
