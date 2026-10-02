@@ -16,3 +16,14 @@ Try the live Streamlit web application: [HarmoniMed Live Demo](https://harmonime
 ### Installation
 ```bash
 pip install harmonimed-engine
+
+## Performance & Benchmarks
+
+Tested on TCIA multi-vendor collections (Siemens, GE, Philips):
+
+| Metric | Result |
+| :--- | :--- |
+| **Throughput** | ~200+ DICOMs/sec |
+| **Output Format** | Apache Parquet / CSV |
+| **Memory Overhead** | < 150 MB peak |
+| **Supported Modalities** | CT, MR, MG, CR |
